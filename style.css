@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none !important;
+    list-style-type: none;
 }
 
 html{
     font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a:link,
@@ -20,10 +22,12 @@ nav{
 	left: 0;
 	right: 0;
 	top: 0;
-	font-family: 'Montserrat', sans-serif;
 	padding: 0 10%;
 	height: 10vh;
-	background-color: #3e65da;
+    background-color: white;
+	/* background-color: #412abe;
+    background: linear-gradient(180deg, rgba(65, 42, 190, 1) 0%,
+            rgba(94, 67, 244, 1) 100%); */
 }
 .navbar{
     display: flex;
@@ -38,8 +42,9 @@ nav{
 	top: -100px;
 }
 a.judul{
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-weight: bold;
+    color: #412abe;
 }
 nav .icon-burger {
 	display: none;
@@ -51,7 +56,7 @@ nav .icon-burger {
 nav .icon-burger .line {
 	width: 30px;
 	height: 5px;
-	background-color: #fff;
+	background-color: #412abe;
 	margin: 5px;
 	border-radius: 3px;
 	transition: all .3s ease-in-out;
@@ -59,13 +64,13 @@ nav .icon-burger .line {
 
 .cari{
     height: 4rem;
-    width: 60rem;
+    width: 40rem;
     font-size: 2.4rem;
     padding: 0 1rem;
     outline: none;
     color: rgb(126, 126, 126);
     border-radius: 1rem;
-    border-color: lightblue;
+    border: 2px solid #412abe;
 }
 .side-btn{
     display: flex;
@@ -73,8 +78,7 @@ nav .icon-burger .line {
     font-size: 2rem;
 }
 .btn{
-    background-color: rgb(93, 118, 255);
-    color: white;
+    background-color: #ffffff;
     padding: .7rem 2.5rem;
     display: flex;
     justify-content: center;
@@ -82,13 +86,225 @@ nav .icon-burger .line {
     margin-left: 1rem;
     border-radius: .6rem;
 }
+a.btn{
+    color: black;
+}
+a.btn:hover{
+    background-color: #412abe;
+    color: white;
+}
 
+/* Hero section */
+.hero{
+    padding: 30px 10%;
+    margin: 100px auto 30px;
+    background-color: #402abe25;
+    width: 80%;
+    border-radius: 6px;
+    height: 30vh;
+    font-size: 24px;
+    color: rgb(63, 63, 63);
+}
+.hero h1{
+    font-size: 48px;
+}
+.hero p{
+    font-size: 24px;
+}
+.hero a.btn{
+    border-radius: 0;
+    margin-top: 20px;
+    width: 150px;
+    border: 1px dashed #412abe;
+}
+
+
+/* List section */
+.list{
+    background-color: #f8f8f8;
+    padding: 0 10%;
+    color: white;
+}
+.list ul{
+    display: flex;
+    background-color: #402abe;
+    width: 100%;
+    justify-content: start;
+}
+.list ul li{
+    font-size: 20px;
+    letter-spacing: 1.3px;
+    margin-left: 20px;
+    margin-bottom: 2px;
+    /* border-bottom: 3px solid #ffffff; */
+    width: 100px;
+    text-align: center;
+    position: relative;
+}
+.list ul li:hover::after{
+    content: "";
+    border-bottom: 2px solid rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* main section */
+main{
+    padding: 20px 10%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* background-color: aquamarine; */
+}
+.items{
+    max-width: 250px;
+    min-width: 250px;
+    min-height: 330px;
+    max-height: 330px;
+    border-radius: 10px 10px 0 0;
+    /* background-color: #cecece; */
+    background-color: #f7f5ff;
+    margin-bottom: 20px;
+    position: relative;
+}
+.item-img{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px 10px 0 0;
+}
+.item-desc h2{
+    text-align: center;
+    margin-top: 5px;
+}
+.items-list{
+    font-size: 16px;
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 60%;
+    right: 0;
+    margin: 0 10px;
+}
+
+footer{
+    height: 20vh;
+    background-color: #402abe;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ************************************************* */
+/* MASUK */
+/* ************************************************* */
+
+.masuk{
+    min-height: 60vh;
+    padding: 0 10%;
+    /* background-color: #ff6868; */
+    position: relative;
+    text-align: center;
+}
+.masuk h2{
+    font-size: 32px;
+    margin-top: 20px;
+}
+.login{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: flex-start;
+    width: 25%;
+    font-size: 18px;
+}
+.login input{
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.login input[type=submit]{
+    background-color: #402abe;
+    color: white;
+    margin-top: 30px;
+}
+
+
+/* ************************************************* */
+/* daftar */
+/* ************************************************* */
+
+.daftar{
+    min-height: 60vh;
+    padding: 0 10%;
+    /* background-color: #ff6868; */
+    position: relative;
+    text-align: center;
+}
+.daftar h2{
+    font-size: 32px;
+    margin-top: 20px;
+}
+.register{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: flex-start;
+    width: 25%;
+    font-size: 18px;
+}
+.register input{
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+.register input[type=submit]{
+    background-color: #402abe;
+    color: white;
+    margin-top: 30px;
+}
+/* Mobile view */
 @media screen and (max-width: 768px){
+    /* nav */
+    nav{
+        padding: 0 1.6rem;
+    }
     a.judul{
         font-size: 2.4rem;
     }
     .cari{
-        display: none;
+        /* display: none; */
+        width: 15rem;
+        margin-right: 10rem;
     }
     .right{
 		position: fixed;
@@ -111,4 +327,70 @@ nav .icon-burger .line {
     nav .icon-burger {
 		display: block;
 	}
+
+    /* hero */
+    .hero{
+        width: 95%;
+        padding: 10px 20px;
+    }
+    .hero h1{
+        font-size: 3.2rem;
+    }
+    .hero p{
+        font-size: 1.8rem;
+    }
+    .hero a.btn{
+        width: 100px;
+        font-size: 1.8rem;
+        margin-top: 30px;
+    }
+
+    /* list */
+    .list{
+        padding: 0 1.6rem;
+    }
+    .list ul li{
+        font-size: 1.6rem;
+        margin-left: 1rem;
+        letter-spacing: .1rem;
+    }
+
+    /* Main */
+    main{
+        padding: 20px 1.6rem;
+    }
+    .items{
+        max-width: 200px;
+        min-width: 200px;
+        min-height: 250px;
+        max-height: 250px;
+        margin-bottom: 20px;
+    }
+    .items-list{
+        font-size: 14px;
+    }
+
+    /* ************* */
+    /* MASUK */
+    /* ************* */
+    .masuk{
+        padding: 20px 1.6rem;
+        position: relative;
+    }
+    .login{
+        width: 90%;
+        top: 25%;
+    }
+    
+    /* ************* */
+    /* MASUK */
+    /* ************* */
+    .daftar{
+        padding: 20px 1.6rem;
+        position: relative;
+    }
+    .register{
+        width: 90%;
+        top: 25%;
+    }
 }
